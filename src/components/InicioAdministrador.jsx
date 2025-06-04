@@ -106,6 +106,7 @@ export const InicioAdministrador = () => {
 
   return (
     <article className="flex p-2 flex-col h-full ">
+      <h1 className="text-2xl font-bold mb-4 text-center">Lista de usuarios</h1>
       <div>
         <div className="overflow-y-auto min-h-[470px]">
           <div className="flex flex-col md:flex-row justify-between mb-4 gap-4">

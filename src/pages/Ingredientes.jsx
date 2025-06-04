@@ -39,7 +39,9 @@ export const Ingredientes = () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Lista de Ingredientes</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">
+        Lista de Ingredientes
+      </h1>
 
       {/* Filtro de búsqueda */}
       <input

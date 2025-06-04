@@ -13,6 +13,8 @@ import { ProtectedRoute } from "./ProtectedRoute";
 import NotFound from "./pages/NotFound";
 import { InicioAdministrador } from "./components/InicioAdministrador";
 import { Ingredientes } from "./pages/Ingredientes";
+import { Gestion_recetas } from "./pages/Gestion_recetas";
+import { Detalles_receta } from "./components/Detalles_receta";
 function App() {
   return (
     <AuthProvider>
@@ -30,6 +32,8 @@ function App() {
             <Route path="/administracion" element={<Administracion />}>
               <Route index element={<InicioAdministrador />} />
               <Route path="ingredientes" element={<Ingredientes />} />
+              <Route path="gestion_recetas" element={<Gestion_recetas />} />
+              <Route path="gestion_recetas/:id" element={<Detalles_receta />} />
             </Route>
           </Route>
         </Routes>

@@ -112,12 +112,14 @@ export const Sobre_Nosotros = () => {
             >
               <img className="w-32 h-32" src="/images/objetivo.svg" alt="" />
               <p>
-                Tu Despensa busca convertirse en una plataforma innovadora y
-                esencial en la vida cotidiana de millones de usuarios. Como una
-                solución moderna para la gestión de alimentos en los hogares,
-                esta aplicación ha sido diseñada para simplificar el control del
-                inventario de productos, reducir el desperdicio de alimentos y
-                facilitar la planificación de comidas de manera eficiente.
+                Tu Despensa busca convertirse en una
+                <Link to="/ingresar"> plataforma </Link>
+                innovadora y esencial en la vida cotidiana de millones de
+                usuarios. Como una solución moderna para la gestión de alimentos
+                en los hogares, esta aplicación ha sido diseñada para
+                simplificar el control del inventario de productos, reducir el
+                desperdicio de alimentos y facilitar la planificación de comidas
+                de manera eficiente.
               </p>
             </motion.div>
             <motion.div
