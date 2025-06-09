@@ -116,7 +116,7 @@ export const Perfil_de_Usuario = () => {
         <div className="flex flex-col p-4 bg-white rounded-2xl row-span-2">
           <span className="w-full justify-center items-center flex">
             <img
-              src={`http://localhost:4000/${usuario.profilephoto}`}
+              src={`https://tudespensa-backend.onrender.com/${usuario.profilephoto}`}
               alt="Foto de perfil"
               className="w-24 h-24 rounded-full object-cover border-2 border-gray-300 shadow-md"
             />

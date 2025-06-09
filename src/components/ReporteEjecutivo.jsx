@@ -28,7 +28,7 @@ const ReporteEjecutivo = () => {
       if (tipoUsuario !== "todos") queryParams.append("tipo", tipoUsuario);
 
       const res = await fetch(
-        `http://localhost:4000/api/reportes/ejecutivo?${queryParams.toString()}`,
+        `https://tudespensa-backend.onrender.com/api/reportes/ejecutivo?${queryParams.toString()}`,
         { credentials: "include" }
       );
 

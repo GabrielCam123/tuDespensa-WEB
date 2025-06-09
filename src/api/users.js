@@ -26,7 +26,7 @@ export const updateUserRequestWeb = (id, formData) =>
     },
   });
 export const updateInformationByUserId = async (id, informacion) => {
-  const response = await fetch(`http://localhost:4000/api/information/${id}`, {
+  const response = await fetch(`https://tudespensa-backend.onrender.com/api/information/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -43,7 +43,7 @@ export const updateInformationByUserId = async (id, informacion) => {
 export const createOrUpdateDietByUserId = async (id, dietData) => {
   console.log("Enviando dieta al backend:", dietData, "para usuario:", id);
 
-  const response = await fetch(`http://localhost:4000/api/diet/user/${id}`, {
+  const response = await fetch(`https://tudespensa-backend.onrender.com/api/diet/user/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

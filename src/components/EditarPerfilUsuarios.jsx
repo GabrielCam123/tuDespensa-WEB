@@ -26,7 +26,7 @@ export const EditarPerfilUsuarios = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:4000/api/user/${usuario._id}/upload-photo`, // ruta corregida
+        `https://tudespensa-backend.onrender.com/api/user/${usuario._id}/upload-photo`, // ruta corregida
         {
           method: "PUT",
           body: formData,
@@ -175,7 +175,7 @@ export const EditarPerfilUsuarios = () => {
         <div className="flex flex-col p-4 bg-white rounded-2xl">
           <div className="flex flex-col items-center">
             <img
-              src={`http://localhost:4000/${usuario.profilephoto}`}
+              src={`https://tudespensa-backend.onrender.com/${usuario.profilephoto}`}
               alt="Foto de perfil"
               className="w-24 h-24 rounded-full object-cover border-2 border-gray-300 shadow-md cursor-pointer"
               onClick={() => document.getElementById("fileInput").click()}
