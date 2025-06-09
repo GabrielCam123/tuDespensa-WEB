@@ -12,27 +12,32 @@ export const Planes = () => {
           <h1 className="text-4xl font-bold">Nuestros Planes</h1>
           <div className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-8 justify-evenly w-full">
             <CardPlan
-              nombrePlan="Plan Estandar"
+              nombrePlan="Gratuito"
               caracteristicas={[
-                "Organiza Tu despesa",
+                "Organiza Tu Despensa",
                 "Lista de compras",
                 "Recetas",
               ]}
             />
             <CardPlan
-              nombrePlan="Plan Estandar"
+              nombrePlan="Plan Mensual"
               caracteristicas={[
                 "Organiza Tu despesa",
                 "Lista de compras",
                 "Recetas",
+                "Controla tus calorias",
+                "Recetas Generadas con IA",
               ]}
             />
             <CardPlan
-              nombrePlan="Plan Estandar"
+              nombrePlan="Plan Anual"
               caracteristicas={[
                 "Organiza Tu despesa",
                 "Lista de compras",
                 "Recetas",
+                "Controla tus calorias",
+                "Recetas Generadoas con IA",
+                "Descuento del 10% cada mes",
               ]}
             />
           </div>

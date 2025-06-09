@@ -31,12 +31,17 @@ export const HeaderProfile = ({ interruptorAside }) => {
             <ul className="flex flex-col">
               <li className="flex items-center gap-2 hover:bg-gray-200 p-2">
                 <MdManageAccounts />
-                <p>Perfil</p>
+                <Link
+                  className="flex items-center gap-2 w-full"
+                  to="/administracion/perfil"
+                >
+                  <p>perfil</p>
+                </Link>
               </li>
-              <li className="flex items-center gap-2 hover:bg-gray-200 p-2">
+              {/* <li className="flex items-center gap-2 hover:bg-gray-200 p-2">
                 <AiFillSetting />
                 <p>Configuracion</p>
-              </li>
+              </li> */}
               <li className="flex items-center hover:bg-gray-200 p-2 transition delay-150 duration-300 ease-in-out hover:-translate-y-1">
                 <Link
                   className="flex items-center gap-2 w-full"

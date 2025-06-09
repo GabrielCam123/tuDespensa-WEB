@@ -9,7 +9,8 @@ import {
 } from "../api/users";
 import { registerAdminRequest } from "../api/auth";
 import { RegistrarUsuario } from "../pages/RegistrarUsuarios";
-
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export const InicioAdministrador = () => {
   const [mostrarPopup, setMostrarPopup] = useState(false);
   const [users, setUsers] = useState([]);
@@ -18,6 +19,7 @@ export const InicioAdministrador = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterRole, setFilterRole] = useState("Todos");
   const [filterStatus, setFilterStatus] = useState("Todos");
+  const navigate = useNavigate();
 
   // Filtrar por texto y rol
   const filteredUsers = users.filter((user) => {
@@ -56,8 +58,7 @@ export const InicioAdministrador = () => {
   };
 
   const handleEdit = (user) => {
-    setUserToEdit(user);
-    setMostrarPopup(true);
+    navigate(`/administracion/editar/${user._id}`);
   };
 
   const handleDelete = async (userId) => {
@@ -154,7 +155,7 @@ export const InicioAdministrador = () => {
             </thead>
             <tbody>
               {currentUsers.map((user, idx) => (
-                <tr key={idx} className="even:bg-blue-50">
+                <tr key={idx} className={`even:bg-blue-50`}>
                   <td className="border  py-2 text-center">
                     {idx + 1 + (currentPage - 1) * usersPerPage}
                   </td>
@@ -165,7 +166,13 @@ export const InicioAdministrador = () => {
                       ) : (
                         <GrStatusGoodSmall className="text-red-600" />
                       )}
-                      {user.username}
+
+                      <Link
+                        to={`/administracion/perfil/${user._id}`}
+                        className="text-blue-600 hover:underline"
+                      >
+                        {user.username}
+                      </Link>
                     </span>
                   </td>
                   <td className="border border-black px-4 py-2 text-blue-600 hover:underline">

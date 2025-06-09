@@ -4,6 +4,7 @@ import {
   verifyTokenRequest,
   registerRequest,
   registerAdminRequest,
+  getProfileRequest,
 } from "../api/auth";
 import Cookies from "js-cookie";
 
@@ -106,6 +107,18 @@ export const AuthProvider = ({ children }) => {
     }
     checkLogin();
   }, []);
+  const getProfile = async () => {
+    try {
+      const res = await getProfileRequest();
+      return res.data;
+    } catch (error) {
+      console.error(
+        "Error al obtener el perfil:",
+        error.response?.data || error.message
+      );
+      throw error;
+    }
+  };
   return (
     <AuthContext.Provider
       value={{
@@ -117,6 +130,7 @@ export const AuthProvider = ({ children }) => {
         isAuthenticated,
         errors,
         RegistrarUsuario,
+        getProfile,
       }}
     >
       {children}

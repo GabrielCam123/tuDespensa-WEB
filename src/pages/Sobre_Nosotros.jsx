@@ -218,13 +218,21 @@ export const Sobre_Nosotros = () => {
             Descarga la aplicacion o inicia sesion
           </h1>
           <div className="grid items-center grid-rows-2 w-full md:grid-rows-1 md:grid-cols-2 gap-4">
-            <button className="p-4 text-white font-bold rounded-2xl bg-zinc-800 hover:bg-paleta5">
-              Descargar La Aplicacion
-              <a href="https://mega.nz/file/7CAiVC7Z#MdhqkwJhTLzHOW5WFgqDu72DnsyDcbcUEL04ML7-YMI"></a>
-            </button>
-            <button className="p-4 text-white font-bold rounded-2xl bg-zinc-800 hover:bg-paleta5">
-              <Link to="/ingresar">Iniciar sesion</Link>
-            </button>
+            <a
+              href="https://mega.nz/file/PFkBlIYR#5qgYFjBcoduAlDJGzW2jSt3XMPtRuudJYj4B6AITmgw"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="p-4 text-white font-bold rounded-2xl bg-zinc-800 hover:bg-paleta5 w-full ">
+                Descargar La Aplicación
+              </button>
+            </a>
+            <Link
+              to="/ingresar"
+              className="block w-full p-4 text-white font-bold rounded-2xl bg-zinc-800 hover:bg-paleta5 text-center transition-colors duration-200"
+            >
+              Iniciar sesión
+            </Link>
           </div>
         </section>
         <section id="seccion-5">

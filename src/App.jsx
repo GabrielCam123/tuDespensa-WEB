@@ -15,6 +15,11 @@ import { InicioAdministrador } from "./components/InicioAdministrador";
 import { Ingredientes } from "./pages/Ingredientes";
 import { Gestion_recetas } from "./pages/Gestion_recetas";
 import { Detalles_receta } from "./components/Detalles_receta";
+import { Perfil_de_Usuario } from "./pages/Perfil_de_usuario";
+import { PerfilUsuario } from "./pages/PerfilUsuarios";
+import CrearUnUsuario from "./components/CrearUnUsuario";
+import { EditarPerfilUsuarios } from "./components/EditarPerfilUsuarios";
+import ReporteEjecutivo from "./components/ReporteEjecutivo";
 function App() {
   return (
     <AuthProvider>
@@ -34,6 +39,11 @@ function App() {
               <Route path="ingredientes" element={<Ingredientes />} />
               <Route path="gestion_recetas" element={<Gestion_recetas />} />
               <Route path="gestion_recetas/:id" element={<Detalles_receta />} />
+              <Route path="perfil" element={<Perfil_de_Usuario />} />
+              <Route path="perfil/:id" element={<PerfilUsuario />} />
+              <Route path="crear_un_usuario" element={<CrearUnUsuario />} />
+              <Route path="editar/:id" element={<EditarPerfilUsuarios />} />
+              <Route path="reporte" element={<ReporteEjecutivo/>}/>
             </Route>
           </Route>
         </Routes>

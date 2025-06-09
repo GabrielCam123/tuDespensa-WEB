@@ -64,27 +64,31 @@ export const Ingresar = () => {
               {errors.password && (
                 <p className="text-red-500">Password es requerido</p>
               )}
-              <div className="flex justify-center">
+              <div className="flex justify-center m-2">
                 <ReCAPTCHA
                   sitekey="6LcSyQQrAAAAAI6JS2BKgcLE-6T5jNBvITLLNidK"
                   onChange={setCaptchaValue}
+                  hl="es"
                 />
               </div>
-              <button className="bg-paleta1 p-2 rounded-2xl" type="submit">
+              <button
+                type="submit"
+                className="bg-paleta1 w-full p-2 rounded-2xl text-white font-bold text-center hover:bg-paleta5 transition-colors duration-200"
+              >
                 Ingresar
               </button>
             </form>
-            <p className="text-center">o continua con...</p>
+            {/* <p className="text-center">o continua con...</p>
             <div className="flex">
               <button>g</button>
               <button>f</button>
               <button>w</button>
               <button>i</button>
-            </div>
-            <span className="flex gap-5 justify-center">
+            </div> */}
+            {/* <span className="flex gap-5 justify-center">
               <p>¿No tienes Cuenta?</p>
               <Link to="/registrar">Registrarse</Link>
-            </span>
+            </span> */}
           </div>
         </section>
         <Footer />

@@ -59,7 +59,7 @@ function RecetasWebFree() {
   return (
     <>
       <Header />
-      <article className="bg-paleta2 min-h-screen">
+      <article className="bg-paleta2 min-h-screen flex flex-col">
         <h1 className="text-4xl text-center py-4">Recetas</h1>
 
         {selectedRecipe ? (
